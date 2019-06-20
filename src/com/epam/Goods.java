@@ -6,13 +6,13 @@ import java.util.StringTokenizer;
 
 public class Goods {
     private static HashMap<String,String> goods = new HashMap<String, String>();
-    private static HashMap<String,Integer> goodsCost = new HashMap<String, Integer>();
+    private final static HashMap<String,Integer> goodsCost = new HashMap<String, Integer>();
 
     public Goods() {
     }
 
     public void addGoods() throws FileNotFoundException {
-        String forBufferedReader = new String();
+        String forBufferedReader;
         BufferedReader bf = new BufferedReader(new FileReader("goods"));
         try {
             while ((forBufferedReader = bf.readLine()) != null) {
@@ -35,17 +35,20 @@ public class Goods {
         System.out.println(goods.keySet());
     }
 
+    public int getTotalCost() {
+        return totalCost;
+    }
+
+    private int totalCost;
     public void reductionOfGoods(String clientGoods,int quantityOfGoods){
         goods.put(clientGoods.toLowerCase(),String.valueOf(Integer.parseInt(goods.get(clientGoods))- quantityOfGoods));
+        totalCost+=goodsCost.get(clientGoods)*quantityOfGoods;
     }
-    public void goodsIncrease(){
 
-    }
     public void goodsReader() throws IOException {
         String forBufferedReader = new String();
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("goodss.txt"));
         for (String key: goods.keySet()) {
-            System.out.println(key);
             bufferedWriter.write(key+" "+goods.get(key)+" "+goodsCost.get(key)+"\n");
         }
         bufferedWriter.close();

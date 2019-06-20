@@ -1,18 +1,13 @@
 package com.epam;
 
 import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
-        Goods goods = new Goods();
-        goods.addGoods();
-        goods.showGoods();
-        try {
-            goods.goodsReader();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        System.out.println("Сколько людей стоит в очереди?");
+        Scanner scanner = new Scanner(System.in);
+        Magazine magazine = new Magazine(Integer.parseInt(scanner.next()));
     }
 }
