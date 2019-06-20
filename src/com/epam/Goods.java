@@ -30,9 +30,8 @@ public class Goods {
         }
     }
     public void showGoods(){
-        System.out.println(goods);
-        System.out.println(goodsCost);
-        System.out.println(goods.keySet());
+        System.out.println("Количество : "+goods);
+        System.out.println("Стоимость  : "+goodsCost);
     }
 
     public int getTotalCost() {

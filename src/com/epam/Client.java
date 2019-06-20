@@ -10,10 +10,8 @@ public class Client {
     public void selectGoods() throws FileNotFoundException {
         goods.addGoods();
         goods.showGoods();
-        System.out.println("Выше показано сколько всего товара на складе.\n" +
-                "Какие товары выбрал покупатель?\n" +
-                "Укажите товар и количество.");
-        System.out.println("Количество вида товара у покупателя в корзине: ");
+        System.out.println("Выше показано сколько всего товара на складе и его стоимость.\n" +
+                "Укажите количество вида товара у покупателя");
         Scanner scanner = new Scanner(System.in);
         int quantity = Integer.parseInt(scanner.next());
 

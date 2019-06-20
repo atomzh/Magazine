@@ -1,7 +1,7 @@
-mouse 40 3000
-butter 40 500
-chicken 50 1300
-book 100 2000
+mouse 35 3000
+butter 37 500
+chicken 48 1300
+book 97 2000
 milk 20 300
 red_meet 30 1000
 monitor 20 10000

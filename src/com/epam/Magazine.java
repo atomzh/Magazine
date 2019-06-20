@@ -1,6 +1,7 @@
 package com.epam;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class Magazine {
 
@@ -9,6 +10,11 @@ public class Magazine {
         Client client = new Client();
         for (int i = 0; i <persons ; i++) {
             client.selectGoods();
+        }
+        try {
+            goods.goodsReader();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
