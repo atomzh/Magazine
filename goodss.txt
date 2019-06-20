@@ -1,0 +1,8 @@
+mouse 40 3000
+butter 40 500
+chicken 50 1300
+book 100 2000
+milk 20 300
+red_meet 30 1000
+monitor 20 10000
+water 100 150
